@@ -1,4 +1,9 @@
 joblib == 1.3.2
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('all-corpora')
+
 nltk == 1.3.2
 nltk.download(‘punkt’)
 
