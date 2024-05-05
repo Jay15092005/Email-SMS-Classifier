@@ -1,9 +1,3 @@
 joblib == 1.3.2
 nltk == 1.3.2
-nltk.download('wordnet')
-nltk.download('punkt')
-nltk.download('all-corpora')
-
-
-nltk.download(‘punkt’)
 
