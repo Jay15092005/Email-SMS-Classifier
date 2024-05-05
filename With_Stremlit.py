@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 import joblib 
 import nltk
 import string
@@ -14,11 +15,11 @@ ps=PorterStemmer() # This Function is used to convert Tenses into simple if Ing 
 MNB=MultinomialNB() # This Our model
 from nltk.corpus import stopwords
 
-   
-tfidf = joblib.load("/Users/jaychotaliya/Downloads/All_Coding_Program/Machine Learning With CampusX/17 Serving Models/17 in 3 Heroku/SMS-Learning/VectorizeinForm")
-model = joblib.load("/Users/jaychotaliya/Downloads/All_Coding_Program/Machine Learning With CampusX/17 Serving Models/17 in 3 Heroku/SMS-Learning/StackingModel")
-Voting = joblib.load("/Users/jaychotaliya/Downloads/All_Coding_Program/Machine Learning With CampusX/17 Serving Models/17 in 3 Heroku/SMS-Learning/VotingModel")
-ETree = joblib.load("/Users/jaychotaliya/Downloads/All_Coding_Program/Machine Learning With CampusX/17 Serving Models/17 in 3 Heroku/SMS-Learning/ExtraTreesClassifier_Model")
+   #/Users/jaychotaliya/Documents/Github/Email-SMS-Classifier/With_Stremlit.py
+tfidf = joblib.load("VectorizeinForm")
+model = joblib.load("StackingModel")
+Voting = joblib.load("VotingModel")
+ETree = joblib.load("ExtraTreesClassifier_Model")
 
     
 def most_frequent(List):
@@ -77,12 +78,6 @@ if st.button("Predict"):
 
     CTreeee=ETree.predict(Vector_Input)
     print("ExtraTreeClasifier Output",CTreeee)
-
-
-
-
-
-
 
     #4.Display
 
