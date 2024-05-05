@@ -2,6 +2,7 @@ import streamlit as st
 from pathlib import Path
 import joblib 
 import nltk
+nltk.download("popular")
 import string
 from nltk.stem.porter  import PorterStemmer
 import pickle
